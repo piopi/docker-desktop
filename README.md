@@ -1,4 +1,4 @@
-# Cypress Docker Desktop [![Docker Image CI](https://github.com/piopi/cypress-desktop/actions/workflows/docker-image.yml/badge.svg)](https://github.com/piopi/cypress-desktop/actions/workflows/docker-image.yml) ![](https://img.shields.io/docker/pulls/piopirahl/cypress-desktop-browsers.svg?maxAge=604800)
+# Cypress Docker Desktop [![Docker Image CI](https://github.com/piopi/cypress-desktop/actions/workflows/docker-image.yml/badge.svg)](https://github.com/piopi/cypress-desktop/actions/workflows/docker-image.yml) ![](https://img.shields.io/docker/pulls/piopirahl/docker-desktop.svg?maxAge=604800)
 
 ### Overview
 
@@ -13,7 +13,7 @@ The Image comes with noVNC to allow user to view the desktop environment with th
 ### Usage
 
 ```
-docker run -d -p 6901:6901 -p 5901:5901 piopirahl/cypress-desktop-base:cypress6.7.1
+docker run -d -p 6901:6901 -p 5901:5901 piopirahl/docker-desktop
 ```
 
 
@@ -30,8 +30,8 @@ You will be able to access the noVNC windows at [http://localhost:6901](http://l
 
 DockerHub link of the images:
 
-- https://hub.docker.com/repository/docker/piopirahl/cypress-desktop-base
-- https://hub.docker.com/repository/docker/piopirahl/cypress-desktop-browsers
+- https://hub.docker.com/repository/docker/piopirahl/docker-desktop
+
 
 ## Image Contents
 
