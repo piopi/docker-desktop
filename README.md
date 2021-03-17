@@ -13,7 +13,7 @@ The Image comes with noVNC to allow user to view the desktop environment with th
 ### Usage
 
 ```
-docker run -d -p 6901:6901 -p 5901:5901 piopirahl/docker-desktop
+docker run -d -p 6901:6901 -p 5901:5901 piopirahl/docker-desktop:1.0.0
 ```
 
 
