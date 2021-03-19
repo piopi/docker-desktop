@@ -2,7 +2,7 @@
 
 ### Overview
 
-A Dockerized light-weight desktop environment accessible from the brower with NoVNC. Google Chrome Browser included.
+A Dockerized light-weight desktop environment accessible from the browser with NoVNC. Firefox Browser included.
 
 ![](/screenshots/Capture.PNG)
 *noVNC view of the Container running*
@@ -13,12 +13,34 @@ The Image comes with noVNC to allow user to view the desktop environment with th
 ### Usage
 
 ```
-docker run -d -p 6901:6901 -p 5901:5901 piopirahl/docker-desktop:1.0.0
+docker run -d -p 6901:6901 -p 5901:5901 --name desktop piopirahl/docker-desktop:1.0.1 
 ```
 
-
-
 You will be able to access the noVNC windows at [http://localhost:6901](http://localhost:6901) or use your VNC viewer with `localhost:5901`
+
+#### Custom configs
+
+The config files are stored under `/home/docker/.config` on the container. 
+In order, to save on your host your configs, you can follow those steps:
+1. Run the docker image to generate the configs on the container
+```
+docker run -d -p 6901:6901 -p 5901:5901 --name desktop piopirahl/docker-desktop:1.0.1 
+```
+2. Copy the content of the container on the host 
+```
+mkdir config
+docker cp desktop:/home/docker/.config  $PWD/config
+```
+3. Stop the running container and start a new one with a mounted volume 
+
+   ```
+   docker rm -f desktop
+   docker run -d -p 6901:6901 -p 5901:5901 --name desktop -v $PWD/config/.config:/home/docker/.config piopirahl/docker-desktop:1.0.1 
+   ```
+
+4. Now your local configs will be saved on your host machine
+
+
 
 #### Ports
 
