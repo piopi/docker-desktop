@@ -60,7 +60,7 @@
       <property name="style" type="uint" value="1"/>
     </property>
     <property name="plugin-14" type="string" value="directorymenu">
-      <property name="base-directory" type="string" value="/home/docker"/>
+      <property name="base-directory" type="string" value="/home/dockeruser"/>
     </property>
   </property>
 </channel>
