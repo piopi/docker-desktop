@@ -4,17 +4,17 @@ ENV DISPLAY=:1 \
     VNC_PORT=5901 \
     NO_VNC_PORT=6901 \
     VNC_COL_DEPTH=32 \
-    VNC_RESOLUTION=1920x1080 
+    VNC_RESOLUTION=1920x1080
 
 # No interactive frontend during docker build
-ENV DEBIAN_FRONTEND=noninteractive 
+ENV DEBIAN_FRONTEND=noninteractive
 
 # "fake" dbus address to prevent errors
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 
 # good colors for most applications
-ENV TERM vt100 
+ENV TERM vt100
 
 
 RUN apt-get update && \
@@ -29,11 +29,11 @@ RUN apt-get update && \
   apt-get clean; \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Install NOVNC and TigerVNC.    
+# Install NOVNC and TigerVNC.
 RUN     wget -qO- https://dl.bintray.com/tigervnc/stable/tigervnc-1.8.0.x86_64.tar.gz | tar xz --strip 1 -C /; \
         git clone --branch v1.2.0 --single-branch https://github.com/novnc/noVNC.git /opt/noVNC; \
         git clone --branch v0.9.0 --single-branch https://github.com/novnc/websockify.git /opt/noVNC/utils/websockify; \
-        ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html     
+        ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
 # disable shared memory X11 affecting  Chrome
 ENV QT_X11_NO_MITSHM=1 \
     _X11_NO_MITSHM=1 \
