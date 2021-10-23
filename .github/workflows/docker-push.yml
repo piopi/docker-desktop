@@ -56,5 +56,5 @@ jobs:
         with:
           context: ./base/main
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: piopirahl/docker-desktop:latest
           labels: ${{ steps.meta.outputs.labels }}
