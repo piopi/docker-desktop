@@ -7,7 +7,7 @@ A Dockerized light-weight desktop environment accessible from the browser with N
 ![](/screenshots/Capture.PNG)
 *noVNC view of the Container running*
 
-The Image comes with noVNC to allow user to view the desktop environment with their browsers.
+The image comes with noVNC to allow user to view the desktop environment with their browsers.
 
 ## Usage
 
