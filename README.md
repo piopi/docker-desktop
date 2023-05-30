@@ -60,7 +60,7 @@ DockerHub link of the images:
 
 - [Xvfb](http://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml) - X11 in a virtual framebuffer
 - [TigerVNC](https://github.com/TigerVNC/tigervnc) - A VNC server that scrapes the above X11 server
-- [noNVC](https://github.com/novnc/noVNC) - A HTML5 canvas vnc viewer
+- [noVNC](https://github.com/novnc/noVNC) - A HTML5 canvas vnc viewer
 - [xfce4](https://www.xfce.org/) - a small desktop environment
 
 ## Maintainers
